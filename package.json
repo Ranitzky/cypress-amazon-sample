@@ -4,7 +4,8 @@
   "description": "Cypress sample Amazon.com",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-e2e": "node_modules/.bin/cypress open"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,8 @@
   },
   "devDependencies": {
     "cypress-cucumber-preprocessor": "^2.5.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "prettier": "2.0.5"
   },
   "husky": {
@@ -29,12 +32,13 @@
     }
   },
   "lint-staged": {
-    "**/*": [
-      "eslint --fix",
+    "*.{js,css,json,md}": [
       "prettier --write"
     ]
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
+    "nonGlobalStepDefinitions": true,
+    "commonPath": "cypress/integration/common",
+    "stepDefinitions": "cypress/integration/common"
   }
 }
