@@ -1,0 +1,22 @@
+{
+  "name": "cypress-amazon-sample",
+  "version": "1.0.0",
+  "description": "Cypress sample Amazon.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ranitzky/cypress-amazon-sample.git"
+  },
+  "author": "Rico Wilcke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ranitzky/cypress-amazon-sample/issues"
+  },
+  "homepage": "https://github.com/Ranitzky/cypress-amazon-sample#readme",
+  "dependencies": {
+    "cypress": "^4.12.1"
+  }
+}
