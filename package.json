@@ -18,5 +18,23 @@
   "homepage": "https://github.com/Ranitzky/cypress-amazon-sample#readme",
   "dependencies": {
     "cypress": "^4.12.1"
+  },
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^2.5.4",
+    "prettier": "2.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   }
 }
