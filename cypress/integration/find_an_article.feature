@@ -6,4 +6,4 @@ Feature: Type an article on Amazon webpage
         And Type "Testartikel AMAZON" into input with id "twotabsearchtextbox"
         And Click class "nav-search-submit"
         Then Verify class "s-search-results" with text "Testartikel AMAZON"
-        
+        And Verify url contains "/s?k=Testartikel+AMAZON"
