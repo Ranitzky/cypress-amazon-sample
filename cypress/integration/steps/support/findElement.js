@@ -12,6 +12,8 @@ export function findElement(elementType, elementName) {
             return cy.get(`.${elementName}`);
 
         case 'data-component-type':
+        case 'data-index':
+        case 'id':
         case 'title':
             return cy.xpath(`.//*[@${elementType}="${elementName}"]`);
 
