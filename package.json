@@ -4,6 +4,7 @@
     "description": "Cypress sample Amazon.com",
     "main": "index.js",
     "scripts": {
+        "documentation": "node_modules/.bin/documentation readme cypress/integration/*/*.js --section='Definitions'",
         "test": "echo \"Error: no test specified\" && exit 1",
         "test-e2e": "node_modules/.bin/cypress open"
     },
@@ -19,6 +20,7 @@
     "homepage": "https://github.com/Ranitzky/cypress-amazon-sample#readme",
     "dependencies": {
         "cypress": "^4.12.1",
+        "documentation": "^13.0.2",
         "lodash": "^4.17.20"
     },
     "devDependencies": {
@@ -30,7 +32,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged"
+            "pre-commit": "npm run documentation && lint-staged"
         }
     },
     "lint-staged": {

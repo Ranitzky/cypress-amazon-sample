@@ -11,6 +11,7 @@ function convertOperator(operator) {
  * Compares two values with each other.
  * @example Verify value "{valueName1}" is {operator} value "{valueName2}"
  * @example Verify value "$vehicleTotal" is less than value "$sumTotal"
+ * @memberof then
  * @param {string} valueName1 1st input
  * @param {string} operator   comparison operator (less than|greater than|equal|not equal)
  * @param {string} valueName2 2nd input

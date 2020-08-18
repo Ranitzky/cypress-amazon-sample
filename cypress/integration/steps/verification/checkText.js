@@ -5,6 +5,7 @@ const { findElement } = require('./../support/findElement');
  * @example Verify {elementType} "{elementName}"( not) with text "{expectedText}"
  * @example Verify class "s-result-list" with text "Amazon Testartikel"
  * @example Verify class "s-result-list" not with text "unbekannter Artikel"
+ * @memberof then
  * @param {string} elementType Type of the element (class|data-component-type|tag|title|xpath)
  * @param {string} elementName Name of the element
  * @param {boolean} falseCase Check, whether the text is or is not on the given element

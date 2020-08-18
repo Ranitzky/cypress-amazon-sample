@@ -2,6 +2,7 @@
  * Write text into a form field element.
  * @example Type "{value}" into input with (id|class) "{elementName}"
  * @example Type "Amazon Testartikel" into input with id "twotabsearchtextbox"
+ * @memberof when
  * @param {string} value Value, that will be inserted into form field element
  * @param {string} Name of the form field element
  */

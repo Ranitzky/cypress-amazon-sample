@@ -5,6 +5,7 @@ const { findElement } = require('../support/findElement');
  * Stores a value from a given element as a key in the session store.
  * @example Store {childType} "{childName}" as "{key}"
  * @example Store class "price" as "articlePrice"
+ * @memberof when
  * @param {string} elementType Type of the element (class|data-component-type|tag|title|xpath)
  * @param {string} elementName Name of the element
  * @param {string} key Key, that holds the stored element

@@ -14,7 +14,8 @@ function convertToFloat(price) {
  * Calculates two stored keys based on the operator. Works only with € currency.
  * Requires, that keys are stored first.
  * @example Calculate "{valueName1}" {operator} "{valueName2}" as "{result}"
- * @example Calculate "$articlePrice1" + "$articlePrice2" as "totalPrice"
+ * @example Calculate "$articlePrice1" plus "$articlePrice2" as "totalPrice"
+ * @memberof when
  * @param {string} valueName1 - 1st input
  * @param {string} operator - Math operator (plus|minus|multiply by|divide by)
  * @param {string} valueName2 - 2nd input

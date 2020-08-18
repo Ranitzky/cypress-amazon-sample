@@ -6,6 +6,10 @@ import { openPath } from './../steps/action/openPath';
 import { typeInto } from './../steps/action/typeInto';
 import { storeValue } from './../steps/action/storeValue';
 
+/**
+ * @namespace when
+ */
+
 When(
     /^Calculate "([^"]*)?" (plus|minus|multiply by|divide by) "([^"]*)?" as "([^"]*)?"$/,
     calcValue
@@ -16,9 +20,15 @@ When(
     click
 );
 
-When(/^Open path "([^"]*)?"$/, openPath);
+When(
+    /^Open path "([^"]*)?"$/,
+    openPath
+);
 
-When(/^Type "([^"]*)?" into input with (id|class) "([^"]*)?"$/, typeInto);
+When(
+    /^Type "([^"]*)?" into input with (id|class) "([^"]*)?"$/,
+    typeInto
+);
 
 When(
     /^Store (class|data-component-type|data-index|tag|title|xpath) "([^"]*)?" as "([^"]*)?"$/,
