@@ -16,7 +16,7 @@ When(
 );
 
 When(
-    /^Click (class|data-component-type|data-index|tag|title|xpath) "([^"]*)?"$/,
+    /^Click (class|data-index|id|tag|title|xpath) "([^"]*)?"$/,
     click
 );
 
@@ -31,6 +31,6 @@ When(
 );
 
 When(
-    /^Store (class|data-component-type|data-index|tag|title|xpath) "([^"]*)?" as "([^"]*)?"$/,
+    /^Store (class|data-index|id|tag|title|xpath) "([^"]*)?" as "([^"]*)?"$/,
     storeValue
 );

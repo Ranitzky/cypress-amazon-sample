@@ -12,3 +12,5 @@ Feature: New customers can register an account
         And Click xpath "//*[@id='a-autoid-0']/span/input"
         And Click xpath "//*[@id='hlb-ptc-btn-native']"
         Then Verify id "auth-create-account-link" with text "Erstellen Sie Ihr Amazon-Konto"
+        When Click id "auth-create-account-link"
+        Then Verify tag "h1" with text "Konto erstellen"

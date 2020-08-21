@@ -9,7 +9,7 @@ import { compareValue } from './../steps/verification/compareValue';
  */
 
 Then(
-    /^Verify (class|data-component-type|data-index|id|tag|title|xpath) "([^"]*)?"( not)* with text "([^"]*)?"$/,
+    /^Verify (class|data-index|id|tag|title|xpath) "([^"]*)?"( not)* with text "([^"]*)?"$/,
     checkText
 );
 

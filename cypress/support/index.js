@@ -18,4 +18,8 @@ require('cypress-xpath');
 
 beforeEach(() => {
     cy.viewport(1920, 1080);
+
+    // create a clean session, empty basket
+    cy.clearLocalStorage();
+    cy.clearCookies();
 });
