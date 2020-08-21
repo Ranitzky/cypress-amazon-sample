@@ -255,9 +255,8 @@ Write text into a form field element.
 ##### Parameters
 
 -   `value` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Value, that will be inserted into form field element
--   `elementType`
--   `elementName`
--   `Name` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** of the form field element
+-   `elementType` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Type of the element (class|id)
+-   `elementName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Name of the element
 
 ##### Examples
 
