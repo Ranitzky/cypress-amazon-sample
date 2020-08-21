@@ -4,7 +4,8 @@
  * @example Type "Amazon Testartikel" into input with id "twotabsearchtextbox"
  * @memberof when
  * @param {string} value Value, that will be inserted into form field element
- * @param {string} Name of the form field element
+ * @param {string} elementType Type of the element (class|id)
+ * @param {string} elementName Name of the element
  */
 export function typeInto(value, elementType, elementName) {
     let element;
