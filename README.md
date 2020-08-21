@@ -10,7 +10,79 @@ Click [here](https://nodejs.org/en/download/package-manager/) for more details.
 
 ```bash
 npm install
+npm run test-e2e
 ```
+
+After cypress has launched, either click a specific test case on the left or choose to run all specs in the top right corner (might take a while to finish loading).
+
+## Structure
+
+The cypress folder:
+
+```bash
+integration/
+  - common/                # regular expressions for "When" and "Then" steps
+  - steps/
+    - action               # the step definition for "When" steps
+    - support              # helper functions for step definitions
+    - verification         # the step definition for "Then" steps
+  - *.feature              # feature files describing the tests written in Gherkin
+```
+
+## Test philosophy
+
+Best practice is to split down the story to test into several separate test cases that focus on one thing.
+
+So I ended up with:
+
+1.  Finding an article, to test the basic search functionality. So that other test can skip this part, by just using a query parameter.
+2.  Find the cheapest articles
+3.  Adding two items to the basket, sum up the prices and compare them with the basket value
+4.  Add an article to the basket, proceed to checkout and check the login / registration screen
+
+For selectors I had to use a mix of classes, xpaths, ids, data-indices and titles. Best practise would be to create a testing-only data-attribute that is independent from the UI. This will be always stable and Automation Engineers can rely on that.
+
+## Known issues / faced problems during implementation
+
+### A/B testing
+
+Amazon runs an A/B test on dealer selection.
+Best practice would be to write 2 tests, handling both different variations on the dealer selection.  
+But without having internal knowledge on Amazon's A/B tests and how to force A or B, it is not possible to control this behavior.
+
+It might happen, that this test case fails. (at the time of writing it is about 50%)
+
+![](img/older_version.png)
+![](img/newer_version.png)
+
+### Newer Cypress major version has been released
+
+While developing Cypress 5 has been published. As this is a major upgrade, it needs more attention.  
+To be on the safe and stable side, I decided to remain on the latest version of 4.
+
+You might see a hint that there is a newer version, when running the tests.
+
+### Price sorting
+
+Although the sorting in the results list is price ascending, it does not sort correct.  
+I don't know how exactly Amazon's sort algorithm works. But for sure, it is not easy as just by price.
+
+![](img/price_sorting.png)
+
+The testcase will most likely fail, as the sorting is actually not correct.
+
+### Displaying of prices
+
+It might also happen that some articles do not show a price at all in the list. But when you click the aticle it displays a price.
+
+![](img/with_price.png)
+![](img/no_price.png)
+
+The testcase will most likely fail, as the actual displaying of prices it not reliable.
+
+### Captchas
+
+When you run too many tests a captcha might come up. As this is a protection against bots (and tests are nothing else then bots) it is not possible to bypass them. Solve the captcha manually and you should be fine for the next test runs.
 
 ## Definitions
 

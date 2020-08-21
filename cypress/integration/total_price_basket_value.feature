@@ -1,6 +1,6 @@
-Feature: New customers can register an account
+Feature: Total price in basket value
 
-    Scenario: Find the cheapest "Snickers" on the Amazon shop. This test does not consider transport costs.
+    Scenario: Add "Snickers" and "Skittles" to the basket and verify, the total price of basket is correct.
 
         When Open path "/s?k=snickers&s=price-asc-rank"
         # 5th data-index because there are 4 advertised products beforehand
